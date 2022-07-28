@@ -9,7 +9,7 @@ var client = new Twitter({
 });
   
 const gettweets = (req, res) => {
-    client.get('search/tweets', {q: '#' + req.body.hashtag , count : 20}).then(data => res.json(data.statuses))
+    client.get('search/tweets', {q: '#' + req.body.hashtag , count : 30}).then(data => res.json(data.statuses))
     .catch(err => res.status(400).json("API Error"));
 }
 
